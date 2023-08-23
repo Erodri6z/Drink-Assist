@@ -1,4 +1,4 @@
-
+import Header from './components/Header/Header'
 import './App.css'
 
 function App() {
@@ -6,9 +6,7 @@ function App() {
 
   return (
     <>
-    <div>
-      <h2>Drink time</h2>
-    </div>
+      <Header title="Drink Assist"/>
     </>
   )
 }
