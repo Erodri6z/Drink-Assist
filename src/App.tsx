@@ -1,3 +1,4 @@
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import SideBar from './components/SideBar/SideBar'
 // import React from 'react'
@@ -12,6 +13,7 @@ function App() {
       {/* <div className="page-middle"> */}
         <SideBar />
       {/* </div> */}
+      <Footer />
     </>
   )
 }
