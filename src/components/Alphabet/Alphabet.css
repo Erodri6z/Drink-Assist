@@ -1,0 +1,16 @@
+.alpha-div {
+  margin-top: 10px;
+  display: flex;
+  text-align: right;
+}
+
+.alpha {
+  list-style: none;
+  margin-left: 8px;
+}
+
+.a-btn {
+  font-weight: 900;
+  padding: 6px;
+  border: solid red 1px;
+}
