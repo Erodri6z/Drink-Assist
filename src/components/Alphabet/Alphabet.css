@@ -1,7 +1,8 @@
 .alpha-div {
   margin-top: 10px;
   display: flex;
-  text-align: right;
+  min-width: 800px;
+  justify-content: center;
 }
 
 .alpha {
