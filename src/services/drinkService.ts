@@ -1,5 +1,4 @@
 const URL = `${import.meta.env.VITE_BACK_END_SERVER_URl}/api/json/v1/1/`
-// console.log(`${import.meta.env.VITE_BACK_END_SERVER_URl}`)
 
 async function getAllDrinksByLetter(letter: string): Promise<any> {
   const apiUrl = `${URL}search.php?f=${letter}`
@@ -10,9 +9,6 @@ async function getAllDrinksByLetter(letter: string): Promise<any> {
   console.log(await res.json())
 
 }
-
-// getAllDrinksByLetter('a')
-
 
 export {
   getAllDrinksByLetter

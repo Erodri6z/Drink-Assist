@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import SideBar from './components/SideBar/SideBar'
 // import React from 'react'
 import './App.css'
+import Alphabet from './components/Alphabet/Alphabet'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <div className="content-container">
         <SideBar />
         <div className="app-content">
-          <h3>hello this will be the thingy </h3>
+          <Alphabet />
         </div>
       </div>
       <Footer />
