@@ -6,7 +6,7 @@ async function getAllDrinksByLetter(letter: string): Promise<any> {
     method: "GET",
 
   })
-  console.log(await res.json())
+  return await res.json()
 
 }
 
