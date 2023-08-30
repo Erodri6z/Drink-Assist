@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Header title="Drink Assist"/>
+      <Header title="Gloomy Spirits"/>
       <div className="content-container">
         <SideBar />
         <div className="app-content">
