@@ -4,12 +4,13 @@ import SideBar from './components/SideBar/SideBar'
 // import React from 'react'
 import './App.css'
 import Alphabet from './components/Alphabet/Alphabet'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 function App() {
 
-  const [drinks, setDrinks] = useState<string[]>([])
-  
+  // const [drinks, setDrinks] = useState<string[]>([])
+ 
+
   return (
     <>
       <Header title="Drink Assist"/>
