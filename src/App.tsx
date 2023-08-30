@@ -4,12 +4,12 @@ import SideBar from './components/SideBar/SideBar'
 // import React from 'react'
 import './App.css'
 import Alphabet from './components/Alphabet/Alphabet'
-// import { useState } from 'react'
+import { useState } from 'react'
 
 function App() {
 
-  // const [drinks, setDrinks] = useState<string[]>([])
- 
+
+  const [recipeData, setRecipeData] = useState<any> (null)
 
   return (
     <>
@@ -17,7 +17,7 @@ function App() {
       <div className="content-container">
         <SideBar />
         <div className="app-content">
-          <Alphabet />
+          <Alphabet setRecipe={setRecipeData} />
         </div>
       </div>
       <Footer />
