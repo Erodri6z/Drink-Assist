@@ -6,8 +6,20 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: left;
+
 }
 
 .title {
-  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 80%;
+  border: 1px solid red;
 }
