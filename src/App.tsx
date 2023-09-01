@@ -1,9 +1,10 @@
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import SideBar from './components/SideBar/SideBar'
-// import React from 'react'
-import './App.css'
 import Alphabet from './components/Alphabet/Alphabet'
+import CocktailsResults from './components/CocktailResults/CocktailsResults'
+import './App.css'
+// import React from 'react'
 import { useState } from 'react'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <SideBar />
         <div className="app-content">
           <Alphabet setRecipe={setRecipeData} />
+          <CocktailsResults />
         </div>
       </div>
       <Footer />
