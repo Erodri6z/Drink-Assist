@@ -1,0 +1,15 @@
+.drink-card{
+  width: 200px;
+  border: 1px solid red;
+  height: 230px;
+}
+
+.thumbnail {
+  width: 200px;
+}
+
+.cocktail-name {
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 10px;
+}
