@@ -10,9 +10,10 @@ const CocktailCard = (props: CocktailResultsProps ) => {
 
   return (
     <div>
-      {/* <img src="" alt="placeholder" /> */}
+      <img src="" alt="placeholder" />
       <div>
         <h4 className="cocktail-name">{props.recipe.idDrink}</h4>
+        <p>{props.recipe.strDrink}</p>
       </div>
     </div>
   )
