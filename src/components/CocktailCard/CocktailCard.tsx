@@ -1,13 +1,18 @@
-import React from "react"
+// import React from "react"
+import { Cocktail } from "../../types/Drinks/Drinks"
 
-const CocktailCard: React.FC = () => {
+interface CocktailResultsProps {
+  recipe: Cocktail
+}
+
+const CocktailCard = (props: CocktailResultsProps ) => {
 
 
   return (
     <div>
-      <img src="" alt="placeholder" />
+      {/* <img src="" alt="placeholder" /> */}
       <div>
-        <h4 className="cocktail-name">Drink Name</h4>
+        <h4 className="cocktail-name">{props.recipe.idDrink}</h4>
       </div>
     </div>
   )

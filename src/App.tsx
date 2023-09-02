@@ -19,7 +19,7 @@ function App() {
         <SideBar />
         <div className="app-content">
           <Alphabet setRecipe={setRecipeData} />
-          <CocktailsResults />
+          <CocktailsResults recipesData = {recipeData} />
         </div>
       </div>
       <Footer />
