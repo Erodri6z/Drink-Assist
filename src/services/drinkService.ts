@@ -12,7 +12,7 @@ async function getAllDrinksByLetter(letter: string): Promise<any> {
 
 
 async function getDrinksByAlcohol(spirit:string) {
-  const apiUrl = `${URL}search.php?i=${spirit}`
+  const apiUrl = `${URL}filter.php?i=${spirit}`
   const res = await fetch(apiUrl, {
     method: 'GET'
   })
