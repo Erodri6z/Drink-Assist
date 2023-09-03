@@ -1,6 +1,7 @@
 import React from "react";
 import { Cocktail } from "../../types/Drinks/Drinks";
 // import CocktailCard from "../CocktailCard/CocktailCard";
+import './RandomPick.css'
 
 
 interface CocktailRandomPickProps {
@@ -16,7 +17,7 @@ const RandomPick: React.FC<CocktailRandomPickProps> = ({ randomDrink }) => {
       randomDrink?.drinks ?
       randomDrink.drinks.map((recipe:any) => (
       <div key={recipe.idDrink} className="random-drink">
-        <p>Dont Know What to drink? Try this one called "{recipe.strDrink}"</p>
+        <p className="recommendation">Dont Know What to drink? Try this one called "{recipe.strDrink}"</p>
       </div>))
       :
       <span></span>
