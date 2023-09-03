@@ -19,7 +19,16 @@ async function getDrinksByAlcohol(spirit:string) {
   return await res.json()
 }
 
+async function searchByName(query: string) {
+  const apiUrl = `${URL}search.php?s=${query}`
+  const res = await fetch(apiUrl, {
+    method: "GET"
+  })
+  return await res.json()
+}
+
 export {
   getAllDrinksByLetter,
-  getDrinksByAlcohol
+  getDrinksByAlcohol,
+  searchByName
 }

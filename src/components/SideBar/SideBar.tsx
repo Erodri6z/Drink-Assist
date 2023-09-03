@@ -66,12 +66,12 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
         <li className="spirit-list">
           <button className="spirit-btn" onClick={() => searchByIngredient('brandy')}>Brandy</button>
         </li>
-        <form onSubmit={handleSubmit}>
-          <li className="spirit-list">
+        <li className="spirit-list">
+          <form onSubmit={handleSubmit}>
             <input type="text" value={searchQuery} onChange={handleChange} className="i-search" placeholder="Other"/>
             <button type="submit" className="spirit-btn">Search</button>
-          </li>
-        </form>
+          </form>
+        </li>
       </ul>
     </div>
     </>
