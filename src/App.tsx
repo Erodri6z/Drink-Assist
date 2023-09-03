@@ -6,6 +6,7 @@ import CocktailsResults from './components/CocktailResults/CocktailsResults'
 import './App.css'
 // import React from 'react'
 import { useState } from 'react'
+import SearchBar from './components/SearchBar/SearchBar'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <SideBar setRecipe={setRecipeData}/>
         <div className="app-content">
           <Alphabet setRecipe={setRecipeData} />
+          <SearchBar setRecipe={setRecipeData}/>
           <CocktailsResults recipesData = {recipeData} />
         </div>
       </div>

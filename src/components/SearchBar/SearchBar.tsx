@@ -1,12 +1,26 @@
 import React, { useState} from "react";
 import * as drinkService from './../../services/drinkService'
 
-const SearchBar: React.FC  = () => {
+
+interface DataFetchingProps {
+  setRecipe: React.Dispatch<React.SetStateAction<any>>
+}
+
+
+const SearchBar: React.FC<DataFetchingProps>  = ({ setRecipe }) => {
 
   const [searchQuery, setSearchQuery] = useState<string>('');
 
+
+  const searchDrinkName = async (query: string) => {
+    const drinks = await drinkService.searchByName(query)
+    setRecipe(drinks)
+  }
+
+
+
   const handleSearchDrink = (query: string) => {
-    drinkService.searchByName(query)
+    searchDrinkName(query)
   };
 
 
@@ -21,7 +35,7 @@ const SearchBar: React.FC  = () => {
 
 
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={handleSubmit}>
         <input type="text" value={searchQuery} onChange={handleChange}  className="d-search" placeholder="Search A Drink"/>
         <button type="submit" className="search-a-drink-btn">Search</button>
