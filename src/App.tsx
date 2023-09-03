@@ -16,7 +16,7 @@ function App() {
     <>
       <Header title="Gloomy Spirits"/>
       <div className="content-container">
-        <SideBar />
+        <SideBar setRecipe={setRecipeData}/>
         <div className="app-content">
           <Alphabet setRecipe={setRecipeData} />
           <CocktailsResults recipesData = {recipeData} />

@@ -17,7 +17,7 @@ const CocktailsResults: React.FC<CocktailResultsProps> = ({ recipesData }) => {
     <div className="drink-list">
       {recipesData?.drinks?.length > 0 ? (
         recipesData.drinks.map((recipe) => (
-          <CocktailCard recipe={recipe} />
+          <CocktailCard key={recipe.idDrink} recipe={recipe} />
         ))
       ) : (
         <h2>No Results</h2>
