@@ -1,6 +1,7 @@
 import { Cocktail } from "../../types/Drinks/Drinks"
-import React from "react"
 import CocktailCard from "../CocktailCard/CocktailCard";
+import React from "react"
+import './CocktailResults.css'
 
 
 interface CocktailResultsProps {
