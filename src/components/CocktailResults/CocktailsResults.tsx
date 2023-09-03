@@ -1,5 +1,6 @@
 import { Cocktail } from "../../types/Drinks/Drinks"
 import CocktailCard from "../CocktailCard/CocktailCard";
+import { Link } from "react-router-dom";
 import React from "react"
 import './CocktailResults.css'
 
@@ -17,7 +18,9 @@ const CocktailsResults: React.FC<CocktailResultsProps> = ({ recipesData }) => {
     <div className="drink-list">
       {recipesData?.drinks?.length > 0 ? (
         recipesData.drinks.map((recipe) => (
-          <CocktailCard key={recipe.idDrink} recipe={recipe} />
+          <Link to="/cocktail-recipe" className="cocktail-link" key={recipe.idDrink} state={{ recipe }}>          
+            <CocktailCard key={recipe.idDrink} recipe={recipe} />
+          </Link>
         ))
       ) : (
         <h2>No Results</h2>

@@ -10,6 +10,7 @@ import CocktailsResults from './components/CocktailResults/CocktailsResults'
 import SearchBar from './components/SearchBar/SearchBar'
 import RandomPick from './components/RandomPick/RandomPick'
 import { Routes, Route } from 'react-router-dom'
+import CocktailDisplay from './components/CocktailDisplay/CocktailDisplay'
 
 function App() {
 
@@ -50,7 +51,9 @@ function App() {
           path='/cocktail-recipe'
           element={
             // <h1>hello this is gonna be a drinks page</h1>
-            <CocktailsResults recipesData={recipeData}/>
+            <>
+              <CocktailDisplay />
+            </>
           }
           />
 
