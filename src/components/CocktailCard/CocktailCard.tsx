@@ -1,4 +1,3 @@
-// import React from "react"
 import { Cocktail } from "../../types/Drinks/Drinks"
 import './CocktailCard.css'
 

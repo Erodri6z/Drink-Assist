@@ -9,6 +9,7 @@ import Alphabet from './components/Alphabet/Alphabet'
 import CocktailsResults from './components/CocktailResults/CocktailsResults'
 import SearchBar from './components/SearchBar/SearchBar'
 import RandomPick from './components/RandomPick/RandomPick'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -33,10 +34,27 @@ function App() {
       <div className="content-container">
         <SideBar setRecipe={setRecipeData}/>
         <div className="app-content">
+        <Routes>
+          <Route 
+          path='/'
+          element={
+          <>
           <Alphabet setRecipe={setRecipeData} />
-          <SearchBar setRecipe={setRecipeData}/>
-          <RandomPick randomDrink={randomPick}/>
-          <CocktailsResults recipesData = {recipeData} />
+          <SearchBar setRecipe={setRecipeData} />
+          <RandomPick randomDrink={randomPick} />
+          <CocktailsResults recipesData={recipeData} />
+          </>
+          }
+          />
+          <Route
+          path='/cocktail-recipe'
+          element={
+            // <h1>hello this is gonna be a drinks page</h1>
+            <CocktailsResults recipesData={recipeData}/>
+          }
+          />
+
+        </ Routes>
         </div>
       </div>
       <Footer />
