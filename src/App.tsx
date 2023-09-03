@@ -7,11 +7,15 @@ import './App.css'
 // import React from 'react'
 import { useState } from 'react'
 import SearchBar from './components/SearchBar/SearchBar'
+import RandomPick from './components/RandomPick/RandomPick'
 
 function App() {
 
-
+  const [randomPick, setRandomPick] = useState<any> (null)
   const [recipeData, setRecipeData] = useState<any> (null)
+
+
+
 
   return (
     <>
@@ -21,6 +25,7 @@ function App() {
         <div className="app-content">
           <Alphabet setRecipe={setRecipeData} />
           <SearchBar setRecipe={setRecipeData}/>
+          <RandomPick randomPick={randomPick}/>
           <CocktailsResults recipesData = {recipeData} />
         </div>
       </div>

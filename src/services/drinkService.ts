@@ -27,8 +27,17 @@ async function searchByName(query: string) {
   return await res.json()
 }
 
+async function randomPick() {
+  const apiUrl = `${URL}random.php`
+  const res = await fetch(apiUrl, {
+    method: "GET"
+  })
+  return await res.json()
+}
+
 export {
   getAllDrinksByLetter,
   getDrinksByAlcohol,
-  searchByName
+  searchByName,
+  randomPick
 }
