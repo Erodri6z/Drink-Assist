@@ -8,3 +8,13 @@
 .app-content{
   margin-top: 91.3px;
 }
+
+::-webkit-scrollbar {
+  background: rgb(0, 0, 0);
+  border-radius: 6px; 
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(167, 14, 14);
+}
