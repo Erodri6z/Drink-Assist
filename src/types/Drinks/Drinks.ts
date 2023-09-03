@@ -1,4 +1,5 @@
 export interface Cocktail {
+  [x: string]: any;
   idDrink: string;
   strDrink: string;
   strDrinkAlternate: string | null;
