@@ -1,4 +1,7 @@
 .drink-list {
   display: flex;
-  
+  width: 800px;
+  height: 300px;
+  overflow: auto;
+  margin: 20px 50px;
 }

@@ -12,7 +12,9 @@ const CocktailCard = (props: CocktailResultsProps ) => {
   return (
     <div className="drink-card">
       <img src={props.recipe.strDrinkThumb} className="thumbnail" alt="thumbnail" />
-        <h4 className="cocktail-name">{props.recipe.strDrink}</h4>
+      <div className="drink-name-box">
+        <h5 className="cocktail-name">{props.recipe.strDrink}</h5>
+      </div>
     </div>
   )
 }

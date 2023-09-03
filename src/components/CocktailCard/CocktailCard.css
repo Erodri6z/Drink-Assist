@@ -14,3 +14,10 @@
   margin-left: 10px;
   height: 12px;
 }
+
+.drink-name-box {
+  background-color: rgba(0, 0, 0, 0.633);
+  position: relative;
+  height: 20px;
+  width: fit-content 10px;
+}
