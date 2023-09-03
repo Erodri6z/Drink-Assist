@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import * as drinkService from './../../services/drinkService'
+import './SearchBar.css'
 
 
 interface DataFetchingProps {
