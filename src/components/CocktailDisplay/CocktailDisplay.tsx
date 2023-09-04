@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 // import { Cocktail } from "../../types/Drinks/Drinks"
 import { useLocation } from "react-router-dom"
-// import { useState } from "react"
+import * as drinkService from './../../services/drinkService'
 
 import './CocktailDisplay.css'
 
@@ -9,13 +9,24 @@ import './CocktailDisplay.css'
 
 const CocktailDisplay: React.FC = () => {
 
+  const [cocktailRecipe, setCocktailRecipe] = useState<any>({})
+
   const location = useLocation()
-  const cocktailRecipe = location.state.recipe
-
-  console.log(cocktailRecipe)
+  const cocktailId = location.state.recipe.idDrink
 
 
-  // console.log(location.state.recipe.)
+  useEffect(() => {
+    const getDetailsOfDrink = async (id: string) => {
+      const cocktailRecipe = await drinkService.getDetails(id)
+      setCocktailRecipe(cocktailRecipe.drinks[0])
+      // const cocktailRecipeData = cocktailRecipe[0]
+    }
+    getDetailsOfDrink(cocktailId)
+  }, [])
+
+
+
+  console.log()
 
   return (
     <>

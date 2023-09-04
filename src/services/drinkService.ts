@@ -43,7 +43,9 @@ async function randomPick(): Promise<any> {
 
 async function getDetails(id: string): Promise<any> {
   const apiUrl = `${URL}lookup.php?i=${id}`
-  const res = await fetch(apiUrl)
+  const res = await fetch(apiUrl, {
+    method: "GET"
+  })
   if (!res.ok) {
     throw new Error('Error picking a random')
   }
