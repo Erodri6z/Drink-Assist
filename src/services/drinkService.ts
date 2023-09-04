@@ -41,9 +41,20 @@ async function randomPick(): Promise<any> {
   return data
 }
 
+async function getDetails(id: string): Promise<any> {
+  const apiUrl = `${URL}lookup.php?i=${id}`
+  const res = await fetch(apiUrl)
+  if (!res.ok) {
+    throw new Error('Error picking a random')
+  }
+  const data = await res.json()
+  return data
+}
+
 export {
   getAllDrinksByLetter,
   getDrinksByAlcohol,
   searchByName,
-  randomPick
+  randomPick,
+  getDetails
 }
