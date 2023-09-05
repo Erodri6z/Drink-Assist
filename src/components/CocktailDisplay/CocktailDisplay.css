@@ -10,20 +10,37 @@
 
 .pic-and-ingredients {
   display: flex;
+
 }
 
 .ingredients-list{
-  overflow: auto;
+  overflow-y: scroll;
   display: grid;
-  grid-template-columns: repeat(3, 40vmin);
+  max-height: 250px;
+  grid-template-columns: repeat(3, 35vmin);
+  /* margin-left:; */
+  text-emphasis: left;
 } 
 
 .ingredients {
-  margin-left: 100px;
+  /* margin-left: 100px; */
   list-style: none;
+  padding: 10px;
 }
 
 .img-ingredients {
   width:30px;
   height: 40px;
+}
+
+.instructions {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 800px;
+  overflow-y: scroll;
+  height: 100px;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
 }

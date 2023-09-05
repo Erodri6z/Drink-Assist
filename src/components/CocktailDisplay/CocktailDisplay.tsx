@@ -19,7 +19,6 @@ const CocktailDisplay: React.FC = () => {
     const getDetailsOfDrink = async (id: string) => {
       const cocktailRecipe = await drinkService.getDetails(id)
       setCocktailRecipe(cocktailRecipe.drinks[0])
-      // const cocktailRecipeData = cocktailRecipe[0]
     }
     getDetailsOfDrink(cocktailId)
   }, [])
@@ -32,6 +31,7 @@ const CocktailDisplay: React.FC = () => {
     <>
     <div className="cocktail-display">
       <h2 className="drink-name">{cocktailRecipe.strDrink} ({cocktailRecipe.strAlcoholic})</h2>
+          <h4>Recommended Glass: {cocktailRecipe.strGlass}</h4>
         <div className="pic-and-ingredients">
         <img
           src={cocktailRecipe.strDrinkThumb}
@@ -53,7 +53,10 @@ const CocktailDisplay: React.FC = () => {
                     alt={ingredient}
                     className="img-ingredients"
                   />
-                  {`${ingredient} ${measure}`}
+                  {`${ingredient}`}
+                  <li>
+                  {`( ${measure})`}
+                  </li>
                 </li>
               );
             }
@@ -62,7 +65,7 @@ const CocktailDisplay: React.FC = () => {
           })}
         </div>
       </div>
-      <h4>Recommended Glass: {cocktailRecipe.strGlass}</h4>
+      <h4>Instructions</h4>
       <div className="instructions">
       <p>{cocktailRecipe.strInstructions}</p>
       </div>
