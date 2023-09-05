@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom"
 import * as drinkService from './../../services/drinkService'
 
 import './CocktailDisplay.css'
+import CocktailCard from "../CocktailCard/CocktailCard"
 
 
 
@@ -30,14 +31,21 @@ const CocktailDisplay: React.FC = () => {
   return (
     <>
     <div className="cocktail-display">
-      <h2 className="drink-name">{cocktailRecipe.strDrink} ({cocktailRecipe.strAlcoholic})</h2>
-          <h4>Recommended Glass: {cocktailRecipe.strGlass}</h4>
+      {/* <h2 className="drink-name">{cocktailRecipe.strDrink} ({cocktailRecipe.strAlcoholic})</h2> */}
         <div className="pic-and-ingredients">
-        <img
+        <div>
+          {/* <p>{cocktailRecipe.strDrink}</p> */}
+          <CocktailCard key={cocktailRecipe.idDrink} recipe={cocktailRecipe} /> 
+          <p className="misc-info">Recommended Glass: {cocktailRecipe.strGlass}</p>
+          <p className="misc-info">This drink is {cocktailRecipe.strAlcoholic}</p>
+        {/* <img
           src={cocktailRecipe.strDrinkThumb}
           className="drink-thumbnail"
           alt="drink-picture"
-        />
+        /> */}
+        </div>
+        <div>
+          <p className="ingredients-title">Ingredients</p>
         <div className="ingredients-list">
           {Array.from({ length: 15 }, (_, index) => {
             const ingredientKey = `strIngredient${index + 1}`;
@@ -52,7 +60,7 @@ const CocktailDisplay: React.FC = () => {
                     src={`https://www.thecocktaildb.com/images/ingredients/${ingredient}-Small.png`}
                     alt={ingredient}
                     className="img-ingredients"
-                  />
+                    />
                   {`${ingredient}`}
                   <li>
                   {`( ${measure})`}
@@ -60,12 +68,14 @@ const CocktailDisplay: React.FC = () => {
                 </li>
               );
             }
-
+            
             return null; 
           })}
+          </div>
         </div>
       </div>
-      <h4>Instructions</h4>
+          
+      <h4 className="instructions-label">Instructions</h4>
       <div className="instructions">
       <p>{cocktailRecipe.strInstructions}</p>
       </div>

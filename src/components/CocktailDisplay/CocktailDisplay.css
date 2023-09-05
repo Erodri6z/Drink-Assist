@@ -1,6 +1,6 @@
 .cocktail-display {
-  margin-left: 30px;
-  text-align: center;
+  margin: 10px;
+  text-align: left;
 }
 
 .drink-thumbnail{
@@ -10,7 +10,7 @@
 
 .pic-and-ingredients {
   display: flex;
-
+  margin-left: -30px;
 }
 
 .ingredients-list{
@@ -19,7 +19,7 @@
   max-height: 250px;
   grid-template-columns: repeat(3, 35vmin);
   /* margin-left:; */
-  text-emphasis: left;
+  border: 1px solid red;
 } 
 
 .ingredients {
@@ -29,17 +29,33 @@
 }
 
 .img-ingredients {
-  width:30px;
-  height: 40px;
+  width:50px;
+  height: 60px;
+}
+
+.ingredients-title {
+  margin: 0;
 }
 
 .instructions {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 800px;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  width: 920px;
   overflow-y: scroll;
-  height: 100px;
+  height: 150px;
+  border: 1px solid red;
 }
+
+.instructions-label {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.misc-info {
+  margin: 0px 30px;
+  font-size: 11px;
+}
+
 
 ::-webkit-scrollbar{
   width: 5px;
