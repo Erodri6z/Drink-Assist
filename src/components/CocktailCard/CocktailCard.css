@@ -5,6 +5,16 @@
   margin: 5px 30px;
 }
 
+.display-card {
+  width: 300px;
+  height: 300px;
+}
+
+.display-card-thumbnail {
+  width: 300px;
+  height: 300px;
+}
+
 .thumbnail {
   width: 200px;
 }

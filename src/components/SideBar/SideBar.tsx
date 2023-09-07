@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
 import * as drinkService from './../../services/drinkService'
 import './SideBar.css'
@@ -7,7 +7,19 @@ interface DataFetchingProps {
   setRecipe: React.Dispatch<React.SetStateAction<any>>
 }
 
+
+
 const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
+  
+  const [ingredients, setIngredients] = useState<any>([])
+  
+  useEffect(() => {
+    const getIngredients = async () => {
+      const ingredientList = await drinkService.getAlIngredients()
+      setIngredients(ingredientList.drinks.sort())
+    }
+    getIngredients()
+  },[])
 
 
   const searchByIngredient = async (spirit: string) => {
@@ -22,8 +34,8 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   };
 
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSearchQuery(e.target.value);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -31,19 +43,35 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     handleSearch(searchQuery); 
   };
 
+
   return (
     <>
     <div className="sidebar">
       <ul>
         <p>Spirits Or Ingredients</p>
-        <li className="spirit-list">
+        {/* <li className="spirit-list">
           <button className="spirit-btn" onClick={() => searchByIngredient('vodka')}>Vodka</button>
         </li>
-        <li className="spirit-list">
-          <button className="spirit-btn" onClick={() => searchByIngredient('whiskey')}>Whiskey</button>
-        </li>
-        <li className="spirit-list">
-          <button className="spirit-btn" onClick={() => searchByIngredient('scotch') }> Scotch</button>
+        <li className="catagory">
+          <li>Whiskey</li>
+          <li className="spirit-list">
+            <button className="spirit-btn" onClick={() => searchByIngredient('whiskey')}>American Whiskey</button>
+          </li>
+          <li className="spirit-list">
+            <button className="spirit-btn" onClick={() => searchByIngredient('scotch') }>Scotch</button>
+          </li>
+          <li className="spirit-list">
+            <button className="spirit-btn" onClick={() => searchByIngredient('whisky') }>Canadian Whisky</button>
+          </li>
+          <li className="spirit-list">
+            <button className="spirit-btn" onClick={() => searchByIngredient('irish whiskey') }>Irish Whiskey</button>
+          </li>
+          <li className="spirit-list">
+            <button className="spirit-btn" onClick={() => searchByIngredient('bourbon') }>Bourbon</button>
+          </li>
+          <li className="spirit-list">
+            <button className="spirit-btn" onClick={() => searchByIngredient('irish cream') }>Irish Cream</button>
+          </li>
         </li>
         <li className="spirit-list">
           <button className="spirit-btn" onClick={() => searchByIngredient('gin') }>Gin</button>
@@ -65,10 +93,17 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
         </li>
         <li className="spirit-list">
           <button className="spirit-btn" onClick={() => searchByIngredient('brandy')}>Brandy</button>
-        </li>
+        </li> */}
         <li className="spirit-list">
           <form onSubmit={handleSubmit}>
-            <input type="text" value={searchQuery} onChange={handleChange} className="i-search" placeholder="Other"/>
+            {/* <input type="text" value={searchQuery} onChange={handleChange} className="i-search" placeholder="Other"/> */}
+            <select name="i-search" id="i-select" onChange={handleChange}>
+            {ingredients.sort().map((i : any  ) => 
+              <option key={i.strIngredient1} value={i.strIngredient1}>
+                {i.strIngredient1}
+              </option>
+              )}
+            </select>
             <button type="submit" className="spirit-btn">Search</button>
           </form>
         </li>
