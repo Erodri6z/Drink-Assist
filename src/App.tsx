@@ -50,7 +50,6 @@ function App() {
           <Route
           path='/cocktail-recipe'
           element={
-            // <h1>hello this is gonna be a drinks page</h1>
             <>
               <CocktailDisplay />
             </>
