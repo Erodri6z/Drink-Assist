@@ -19,10 +19,10 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
       setIngredients(ingredientList.drinks.sort())
     }
     getIngredients()
-  },[])
+  }, [])
 
 
-  console.log(ingredients.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
+  // console.log(ingredients.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
 
   const searchByIngredient = async (spirit: string) => {
     const drinksList = await drinkService.getDrinksByAlcohol(spirit)

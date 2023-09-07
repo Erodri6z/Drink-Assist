@@ -56,9 +56,9 @@ const CocktailDisplay: React.FC = () => {
                     className="img-ingredients"
                     />
                   {`${ingredient}`}
-                  <li>
+                  <p>
                   {`( ${measure})`}
-                  </li>
+                  </p>
                 </li>
               );
             }
