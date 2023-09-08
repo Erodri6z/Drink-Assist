@@ -8,3 +8,31 @@
   
 }
 
+@media (max-width: 850px){
+  .cocktail-link{
+    max-width: fit-content;
+  }
+  .drink-list{
+    min-height: 800px;
+    max-width: 1000px;
+    max-width: 720px;
+    min-width: 300px;
+    position:static;
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 35vmin repeat(2, 35vmin);
+  }
+}
+
+@media (max-width: 710px){
+  .drink-list{
+    /* display: grid; */
+    min-height: 900px;
+    max-height: 1000px;
+    max-width: 720px;
+    min-width: 200px;
+    grid-template-columns:1fr 1fr;
+    justify-items: center;
+    padding: 0px;
+  }
+}
