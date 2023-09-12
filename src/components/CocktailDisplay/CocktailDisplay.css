@@ -60,3 +60,41 @@
 ::-webkit-scrollbar{
   width: 5px;
 }
+
+
+@media (max-width: 400px) {
+  .cocktail-display{
+    max-width: 400px;
+    justify-content: center;
+  }
+  .pic-and-ingredients{
+    max-width: 400px;
+    display: block;
+  }
+  
+  .drink-thumbnail{
+    margin: auto;
+  }
+  .i-div {
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .ingredients{
+    max-width: 300px;
+  }
+  .ingredients-list{
+    margin: auto;
+    max-width: 400px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .instructions{
+    position: static;
+    margin-left:30px;
+    min-width: 200px;
+    max-width: 300px;
+    height: 400px;
+    /* margin-bottom:300px ; */
+  }
+}

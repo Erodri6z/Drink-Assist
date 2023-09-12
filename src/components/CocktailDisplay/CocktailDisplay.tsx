@@ -33,12 +33,12 @@ const CocktailDisplay: React.FC = () => {
     <div className="cocktail-display">
 
         <div className="pic-and-ingredients">
-        <div>
+        <div className="drink-thumbnail">
           <CocktailCard key={cocktailRecipe.idDrink} recipe={cocktailRecipe} /> 
           <p className="misc-info">Recommended Glass: {cocktailRecipe.strGlass}</p>
           <p className="misc-info">This drink is {cocktailRecipe.strAlcoholic}</p>
         </div>
-        <div>
+        <div className="i-div">
           <p className="ingredients-title">Ingredients</p>
         <div className="ingredients-list">
           {Array.from({ length: 15 }, (_, index) => {
