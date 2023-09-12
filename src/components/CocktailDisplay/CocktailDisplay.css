@@ -65,6 +65,7 @@
 @media (max-width: 400px) {
   .cocktail-display{
     max-width: 400px;
+    height: 160%;
     justify-content: center;
   }
   .pic-and-ingredients{
