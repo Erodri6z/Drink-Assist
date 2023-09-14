@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 interface CocktailRandomPickProps {
   randomDrink: {
-    drinks: Cocktail
+    drinks: Cocktail[]
   }
 }
 

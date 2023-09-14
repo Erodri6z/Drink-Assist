@@ -57,13 +57,13 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     <>
     <div className="sidebar">
       <ul>
+        <div className="home-btn">
+          <a href="/">
+            <h4>Home</h4>
+          </a>
+        </div>
         <p>Spirits Or Ingredients</p>
         <li className="spirit-list">
-          <div className="home-btn">
-            <a href="/">
-              <h4>Home</h4>
-            </a>
-          </div>
           <form onSubmit={handleSubmit} >
             <select name="i-search" id="i-select" onChange={handleChange}>
             {ingredients.map((i:any) => 
