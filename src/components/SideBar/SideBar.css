@@ -8,6 +8,10 @@
   border-left: #333;
 }
 
+.noShow {
+  display: none;
+}
+
 .i-search {
   width: 100px;
 }

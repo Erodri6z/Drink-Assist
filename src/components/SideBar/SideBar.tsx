@@ -16,7 +16,7 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   useEffect(() => {
     const getIngredients = async () => {
       const ingredientList = await drinkService.getAlIngredients()
-      setIngredients(ingredientList.drinks.sort())
+      setIngredients(ingredientList.drinks.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
     }
     getIngredients()
   }, [])
@@ -45,6 +45,13 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     handleSearch(searchQuery); 
   };
 
+  // const showForm = ():boolean => {
+  //   const currentURL = window.location.href
+  //   return currentURL.includes('/cocktail-recipe')
+  // }
+
+  // showForm()
+
 
   return (
     <>
@@ -52,9 +59,9 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
       <ul>
         <p>Spirits Or Ingredients</p>
         <li className="spirit-list">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} >
             <select name="i-search" id="i-select" onChange={handleChange}>
-            {ingredients.sort().map((i:any) => 
+            {ingredients.map((i:any) => 
               <option key={i.strIngredient1} value={i.strIngredient1}>
                 {i.strIngredient1}
               </option>
