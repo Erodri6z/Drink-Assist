@@ -1,11 +1,12 @@
 header {
   width: 100%;
   background-color: #333; 
+  position: absolute;
   border-bottom: 1px solid red;
   color: #fff; 
-  position: fixed relative;
   top: 0;
   left: 0;
+  right: 0;
   display: flex;
   justify-content: left;
 
@@ -22,4 +23,16 @@ header {
   margin-top: 10px;
   border-radius: 80%;
   border: 1px solid red;
+}
+
+
+@media (max-width: 400px) {
+  .title{
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
 }
