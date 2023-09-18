@@ -15,3 +15,9 @@
   padding: 6px;
   border: solid red 1px;
 }
+
+@media (max-width: 450px) {
+  .alpha-div{
+    display: none;
+  }
+}
