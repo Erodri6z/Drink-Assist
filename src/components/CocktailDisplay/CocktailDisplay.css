@@ -8,6 +8,10 @@
   height: 250px;
 }
 
+.drink-pic{
+  display: none;
+}
+
 .pic-and-ingredients {
   display: flex;
   margin-left: -30px;
@@ -65,15 +69,31 @@
     justify-content: center;
   }
   .pic-and-ingredients{
-    display: block;
+    display: flow;
+  }
+
+  .card{
+    display: none;
+  }
+
+  .drink-pic{
+    display: contents;
+  }
+
+  .drink-photo{
+    max-width: 300px;
+    min-width: 100px;
+    max-height: 300px;
+    min-height: 100px;
   }
   
   .drink-thumbnail{
-    margin: auto;
+    margin: 30px 50px;
   }
+
   .i-div {
     text-align: center;
-    margin: 40px 20px;
+    margin: 170px 20px 40px 20px;
   }
 
   .instructions-label{

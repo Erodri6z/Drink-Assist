@@ -31,5 +31,11 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: 'DM Mono', monospace;
+  
 }
 
+@media (max-width: 450px) {
+  body{
+    margin-bottom: 400px;
+  }
+}

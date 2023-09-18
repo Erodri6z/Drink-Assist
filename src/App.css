@@ -3,6 +3,7 @@
   flex-direction: row;
   height: 100vh;
   width: 100%;
+  /* margin-bottom: 150px; */
 }
 
 .app-content{

@@ -34,7 +34,13 @@ const CocktailDisplay: React.FC = () => {
 
         <div className="pic-and-ingredients">
         <div className="drink-thumbnail">
-          <CocktailCard key={cocktailRecipe.idDrink} recipe={cocktailRecipe} /> 
+          <div className="card">
+            <CocktailCard key={cocktailRecipe.idDrink} recipe={cocktailRecipe} /> 
+          </div>
+          <div className="drink-pic">
+            <h2>{cocktailRecipe.strDrink}</h2>
+            <img src={cocktailRecipe.strDrinkThumb} alt="drink-pic" className="drink-photo"/>
+          </div>
           <p className="misc-info">Recommended Glass: {cocktailRecipe.strGlass}</p>
           <p className="misc-info">This drink is {cocktailRecipe.strAlcoholic}</p>
         </div>
