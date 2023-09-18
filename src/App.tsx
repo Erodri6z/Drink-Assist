@@ -46,7 +46,9 @@ function App() {
           <Alphabet setRecipe={setRecipeData} />
           <SearchBar setRecipe={setRecipeData} />
           <RandomPick randomDrink={randomPick} />
+          <div className='isearch'>
           <ISearch setRecipe={setRecipeData} />
+          </div>
           <CocktailsResults recipesData={recipeData} />
           </>
           }

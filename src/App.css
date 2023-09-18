@@ -19,3 +19,14 @@
 ::-webkit-scrollbar-thumb {
   background-color: rgb(167, 14, 14);
 }
+
+.isearch{
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .isearch{
+    display: flex;
+    justify-content: center;
+  }
+}
