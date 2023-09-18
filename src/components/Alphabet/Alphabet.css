@@ -4,6 +4,9 @@
   min-width: 800px;
   justify-content: center;
 }
+.mobile-alpha-div {
+  display: none;
+}
 
 .alpha {
   list-style: none;
@@ -19,5 +22,11 @@
 @media (max-width: 450px) {
   .alpha-div{
     display: none;
+  }
+
+  .mobile-alpha-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }

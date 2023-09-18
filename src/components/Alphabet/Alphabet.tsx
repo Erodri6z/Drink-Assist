@@ -18,11 +18,16 @@ const Alphabet: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   }
   
   return(
+    <>
     <div className="alpha-div">
-        { alpha.map((a) => 
-          <li className="alpha" key={a}><button className="a-btn" onClick={() =>  fetchDrinksByLetter(`${a}`)}>{a.toUpperCase()}</button></li>
+      {alpha.map((a) => <li className="alpha" key={a}><button className="a-btn" onClick={() => fetchDrinksByLetter(`${a}`)}>{a.toUpperCase()}</button></li>
+      )}
+    </div>
+    <div className="mobile-alpha-div">
+        {alpha.map((a) => <li className="alpha" key={a}><button className="a-btn" onClick={() => fetchDrinksByLetter(`${a}`)}>{a.toUpperCase()}</button></li>
         )}
     </div>
+    </>
   )
 }
 
