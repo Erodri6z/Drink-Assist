@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import * as drinkService from './../../services/drinkService'
+import './IngredientsSearch.css'
 
 interface DataFetchingProps {
   setRecipe: React.Dispatch<React.SetStateAction<any>>
