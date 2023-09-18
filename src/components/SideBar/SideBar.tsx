@@ -1,6 +1,7 @@
-import React, { useEffect } from "react"
-import { useState } from "react"
-import * as drinkService from './../../services/drinkService'
+import React from "react"
+// import { useState } from "react"
+// import * as drinkService from './../../services/drinkService'
+import ISearch from "../IngredientsSearch/IngredientsSearch"
 import './SideBar.css'
 
 interface DataFetchingProps {
@@ -11,39 +12,39 @@ interface DataFetchingProps {
 
 const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   
-  const [ingredients, setIngredients] = useState<any>([])
+  // const [ingredients, setIngredients] = useState<any>([])
   
-  useEffect(() => {
-    const getIngredients = async () => {
-      const ingredientList = await drinkService.getAlIngredients()
-      setIngredients(ingredientList.drinks.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
-    }
-    getIngredients()
-  }, [])
+  // useEffect(() => {
+  //   const getIngredients = async () => {
+  //     const ingredientList = await drinkService.getAlIngredients()
+  //     setIngredients(ingredientList.drinks.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
+  //   }
+  //   getIngredients()
+  // }, [])
 
 
-  // console.log(ingredients.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
+  // // console.log(ingredients.sort((a:any , b:any) => a.strIngredient1.localeCompare(b.strIngredient1)))
 
-  const searchByIngredient = async (spirit: string) => {
-    const drinksList = await drinkService.getDrinksByAlcohol(spirit)
-    setRecipe(drinksList)
-  }
+  // const searchByIngredient = async (spirit: string) => {
+  //   const drinksList = await drinkService.getDrinksByAlcohol(spirit)
+  //   setRecipe(drinksList)
+  // }
 
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  // const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const handleSearch = (query: string) => {
-    searchByIngredient(query);
-  };
+  // const handleSearch = (query: string) => {
+  //   searchByIngredient(query);
+  // };
 
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSearchQuery(e.target.value);
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setSearchQuery(e.target.value);
+  // };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    handleSearch(searchQuery); 
-  };
+  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   handleSearch(searchQuery); 
+  // };
 
   // const showForm = ():boolean => {
   //   const currentURL = window.location.href
@@ -62,18 +63,9 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
             <h4>Home</h4>
           </a>
         </div>
-        <p>Spirits Or Ingredients</p>
+        <p className="spirits-title">Spirits Or Ingredients</p>
         <li className="spirit-list">
-          <form onSubmit={handleSubmit} >
-            <select name="i-search" id="i-select" onChange={handleChange}>
-            {ingredients.map((i:any) => 
-              <option key={i.strIngredient1} value={i.strIngredient1}>
-                {i.strIngredient1}
-              </option>
-              )}
-            </select>
-            <button type="submit" className="spirit-btn">Search</button>
-          </form>
+          <ISearch setRecipe={ setRecipe } />
         </li>
       </ul>
     </div>

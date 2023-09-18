@@ -11,6 +11,7 @@ import SearchBar from './components/SearchBar/SearchBar'
 import RandomPick from './components/RandomPick/RandomPick'
 import { Routes, Route } from 'react-router-dom'
 import CocktailDisplay from './components/CocktailDisplay/CocktailDisplay'
+import ISearch from './components/IngredientsSearch/IngredientsSearch'
 
 function App() {
 
@@ -33,7 +34,9 @@ function App() {
     <>
       <Header title="Gloomy Spirits"/>
       <div className="content-container">
-        <SideBar setRecipe={setRecipeData}/>
+          <div className='sidebar'>
+            <SideBar setRecipe={setRecipeData}/>
+          </div>
         <div className="app-content">
         <Routes>
           <Route 
@@ -43,6 +46,7 @@ function App() {
           <Alphabet setRecipe={setRecipeData} />
           <SearchBar setRecipe={setRecipeData} />
           <RandomPick randomDrink={randomPick} />
+          <ISearch setRecipe={setRecipeData} />
           <CocktailsResults recipesData={recipeData} />
           </>
           }
@@ -55,7 +59,6 @@ function App() {
             </>
           }
           />
-
         </ Routes>
         </div>
       </div>
