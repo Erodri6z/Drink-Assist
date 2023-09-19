@@ -30,4 +30,7 @@
     display: flex;
     justify-content: center;
   }
+  .app-content{
+    height: 110%;
+  }
 }

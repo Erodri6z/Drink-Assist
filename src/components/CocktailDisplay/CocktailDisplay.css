@@ -82,9 +82,9 @@
 
   .drink-photo{
     max-width: 300px;
-    min-width: 100px;
+    min-width: 50px;
     max-height: 300px;
-    min-height: 100px;
+    min-height: 50px;
   }
   
   .drink-thumbnail{
@@ -93,7 +93,7 @@
 
   .i-div {
     text-align: center;
-    margin: 170px 20px 40px 20px;
+    margin: 220px 20px 40px 20px;
   }
 
   .instructions-label{
