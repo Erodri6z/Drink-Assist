@@ -70,7 +70,8 @@
     justify-content: center;
   }
   .pic-and-ingredients{
-    display: flow;
+    display: inline-block;
+    /* display: block; */
   }
 
   .card{
