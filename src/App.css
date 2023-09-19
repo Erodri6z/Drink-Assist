@@ -3,12 +3,10 @@
   flex-direction: row;
   height: 100vh;
   width: 100%;
-  /* margin-bottom: 150px; */
 }
 
 .app-content{
   margin-top: 91.3px;
-  /* margin-bottom: 400px; */
 }
 
 ::-webkit-scrollbar {
