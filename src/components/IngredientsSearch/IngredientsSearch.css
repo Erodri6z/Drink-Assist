@@ -1,4 +1,4 @@
-/* .noShow {
+.noShow {
   display: none;
 }
 
@@ -9,8 +9,19 @@
 .spirit-list {
   list-style: none;
   margin: 2.5px 0px;
+  width: 100px;
+  overflow: hidden;
+}
+
+select{
+  width: 100px;
+}
+
+
+.i-searcht{
+  width: 20px;
 }
 
 .spirit-btn, .i-search{
   font-family: 'DM Mono', monospace;
-} */
+} 

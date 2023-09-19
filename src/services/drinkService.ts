@@ -17,10 +17,16 @@ async function getDrinksByAlcohol(spirit:string): Promise<any> {
   if (!res.ok) {
     throw new Error('Error picking a ingredient')
   }
-  const data = await res.json()
-  console.log(res)
-  return data
+  let data = await res.json()
+  // console.log(data)
+  if(data.drinks === "None Found"){
+    return null
+  }else{
+    return data
+  }
 }
+
+console.log(getDrinksByAlcohol('aejorum'))
 
 async function searchByName(query: string): Promise<any> {
   const apiUrl = `${URL}search.php?s=${query}`
