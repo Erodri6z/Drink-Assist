@@ -61,6 +61,14 @@ function App() {
             </>
           }
           />
+          <Route
+            path='/*'
+            element={
+              <>
+              <h3>youre not suppose to be here</h3>
+              </>
+            }
+          />
         </ Routes>
         </div>
       </div>
