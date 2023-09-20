@@ -30,26 +30,51 @@ function App() {
     getDrink()
   }, [])
 
+
+  // useEffect(() => {
+  //   const sidebarCheck = async () => {
+  //     const sB = document.querySelector('.sidebar')
+  //     try{
+  //       const checkUrl = location.pathname
+  //       if (checkUrl.includes('/cocktail-recipe')) {
+  //         sB?.classList.add('noshow')
+  //         return
+  //       } else {
+  //         sB?.classList.remove('noshow')
+  //         return
+  //       }
+  //     }catch (error) {
+  //       console.error('cannot remove sidebar', error)
+  //     }
+  //   }
+  //   sidebarCheck()
+  //   console.log(location.pathname)
+  // },[location.pathname])
+
   return (
     <>
       <Header title="Gloomy Spirits"/>
       <div className="content-container">
-          <div className='sidebar'>
-            <SideBar setRecipe={setRecipeData}/>
-          </div>
         <div className="app-content">
         <Routes>
           <Route 
           path='/'
           element={
           <>
-          <Alphabet setRecipe={setRecipeData} />
-          <SearchBar setRecipe={setRecipeData} />
-          <RandomPick randomDrink={randomPick} />
-          <div className='isearch'>
-          <ISearch setRecipe={setRecipeData} />
+          <div className='app-body'>
+            <div className='sidebar'>
+              <SideBar setRecipe={setRecipeData}/>
+            </div>
+            <div>
+              <Alphabet setRecipe={setRecipeData} />
+              <SearchBar setRecipe={setRecipeData} />
+              <RandomPick randomDrink={randomPick} />
+              <div className='isearch'>
+                <ISearch setRecipe={setRecipeData} />
+              </div>
+            <CocktailsResults recipesData={recipeData} />
+            </div>
           </div>
-          <CocktailsResults recipesData={recipeData} />
           </>
           }
           />
