@@ -53,7 +53,7 @@ const CocktailDisplay: React.FC = () => {
             const ingredient = cocktailRecipe[ingredientKey];
             const measure = cocktailRecipe[measureKey];
 
-            if (ingredient && measure) {
+            if (ingredient) {
               return (
                 <li key={ingredientKey} className="ingredients">
                   <img
@@ -63,7 +63,7 @@ const CocktailDisplay: React.FC = () => {
                     />
                   {`${ingredient}`}
                   <p>
-                  {`( ${measure})`}
+                  {`(${measure?measure:'Eye-ball It'})`}
                   </p>
                 </li>
               );
