@@ -31,26 +31,6 @@ function App() {
   }, [])
 
 
-  // useEffect(() => {
-  //   const sidebarCheck = async () => {
-  //     const sB = document.querySelector('.sidebar')
-  //     try{
-  //       const checkUrl = location.pathname
-  //       if (checkUrl.includes('/cocktail-recipe')) {
-  //         sB?.classList.add('noshow')
-  //         return
-  //       } else {
-  //         sB?.classList.remove('noshow')
-  //         return
-  //       }
-  //     }catch (error) {
-  //       console.error('cannot remove sidebar', error)
-  //     }
-  //   }
-  //   sidebarCheck()
-  //   console.log(location.pathname)
-  // },[location.pathname])
-
   return (
     <>
       <Header title="Gloomy Spirits"/>
@@ -90,7 +70,7 @@ function App() {
             path='/*'
             element={
               <>
-              <h3>youre not suppose to be here</h3>
+              <h3>Looks Like You Had One Too Many, Friend.</h3>
               </>
             }
           />
