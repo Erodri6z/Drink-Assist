@@ -15,7 +15,7 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
 
   return (
     <>
-    <div className="sidebar">
+    <div className="sidebar-comp">
       <ul>
         <p className="spirits-title">Spirits Or Ingredients</p>
         <li className="spirit-list">
