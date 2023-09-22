@@ -6,10 +6,17 @@
 .drink-thumbnail{
   width: 250px;
   height: 250px;
+  /* box-shadow:0px 0px 10px 10px rgba(255, 0, 0, 0.2), 10px 0px 10px 0px rgba(255, 0, 0, 0.19); */
+  
+}
+
+.thumbnail{
+  box-shadow:0px 0px 10px 10px rgba(255, 0, 0, 0.2), 10px 0px 10px 0px rgba(255, 0, 0, 0.19);
 }
 
 .drink-pic{
   display: none;
+  
 }
 
 
@@ -24,6 +31,8 @@
   max-height: 250px;
   grid-template-columns: repeat(3, 35vmin);
   border: 1px solid red;
+  box-shadow:0px 0px 10px 10px rgba(255, 0, 0, 0.2), 10px 0px 10px 0px rgba(255, 0, 0, 0.19);
+
 } 
 
 .ingredients {
@@ -39,12 +48,16 @@
 .ingredients-title {
   margin: 0;
 }
+.card{
+  width: 250px;
+}
 
 .instructions {
   width: 920px;
   overflow-y: scroll;
   height: 150px;
   border: 1px solid red;
+  box-shadow:0px 0px 10px 10px rgba(255, 0, 0, 0.2), 10px 0px 10px 0px rgba(255, 0, 0, 0.19);
 }
 
 .instructions-label {
