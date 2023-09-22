@@ -42,7 +42,7 @@
 @media (max-width: 450px) {
   .drink-list {
     display: absolute;
-    margin: auto;
+    margin: 0px auto;
     max-width: 300px;
     min-width: 100px;
     min-height: 350px;

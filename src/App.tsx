@@ -45,7 +45,7 @@ function App() {
             <div className='sidebar'>
               <SideBar setRecipe={setRecipeData}/>
             </div>
-            <div>
+            <div className='landing'>
               <Alphabet setRecipe={setRecipeData} />
               <SearchBar setRecipe={setRecipeData} />
               <RandomPick randomDrink={randomPick} />
@@ -62,7 +62,9 @@ function App() {
           path='/cocktail-recipe'
           element={
             <>
+            <div className='cocktail-page'>
               <CocktailDisplay />
+            </div>
             </>
           }
           />

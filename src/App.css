@@ -1,9 +1,8 @@
 .content-container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  
 }
 
 .app-content{
@@ -13,8 +12,16 @@
 .app-body{
   display: flex;
   height: 100%;
+  bottom: auto;
 }
 
+.landing{
+  background-color: #000000;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 13px ), repeating-linear-gradient( #d8000055, #d80000 );
+  background-size: cover;
+  background-position: center;
+}
 
 
 
@@ -38,6 +45,7 @@
     justify-content: center;
   }
   .app-content{
-    height: 110%;
+    height: 90%;
+    margin-bottom: 0px
   }
 }

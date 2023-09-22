@@ -84,7 +84,8 @@
 @media (max-width: 500px) {
   .cocktail-display{
     margin: 0px;
-    height: 160%;
+    margin-bottom: -100px;
+    height: 100%;
     justify-content: center;
   }
   .pic-and-ingredients{
