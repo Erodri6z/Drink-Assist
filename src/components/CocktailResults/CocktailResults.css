@@ -6,6 +6,11 @@
   margin: 5px 50px;
   border: 1px solid red;
   padding: 10px;
+  background-color: #000000;
+  opacity: 1;
+  background-image:  linear-gradient(#d80000 2.6px, transparent 2.6px), linear-gradient(90deg, #d80000 2.6px, transparent 2.6px), linear-gradient(#d80000 1.3px, transparent 1.3px), linear-gradient(90deg, #d80000 1.3px, #000000 1.3px);
+  background-size: 65px 65px, 65px 65px, 13px 13px, 13px 13px;
+  background-position: -2.6px -2.6px, -2.6px -2.6px, -1.3px -1.3px, -1.3px -1.3px;
   box-shadow:0px 0px 10px 10px rgba(255, 0, 0, 0.2), 10px 0px 10px 0px rgba(255, 0, 0, 0.19);
 
 }
