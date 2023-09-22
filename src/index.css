@@ -37,13 +37,11 @@ body {
 
 @media (max-width: 450px) {
   body{
-    margin-bottom: 0px;
-    height: 1300px;
+    margin-bottom: -10px;
+    height: 1340px;
   }
   
   :root{
     margin-bottom: 0px;
-    background-size: cover;
-    background-position: center;
   }
 }

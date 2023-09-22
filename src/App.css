@@ -34,6 +34,9 @@
 ::-webkit-scrollbar-thumb {
   background-color: rgb(167, 14, 14);
 }
+.cocktail.page{
+  height:100%
+}
 
 .isearch{
   display: none;
@@ -44,6 +47,10 @@
     display: flex;
     justify-content: center;
   }
+  /* .landing{
+    min-height: 900px;
+    max-height:1300px
+  } */
   .app-content{
     height: 90%;
     margin-bottom: 0px
