@@ -12,6 +12,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+
+.content-container{
+  margin-top: 93px;
+  margin-bottom: ;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,22 +29,24 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   min-width: 320px;
   width: 100%;
   min-height: 100vh;
   font-family: 'DM Mono', monospace;
   background-color: #000000;
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 13px ), repeating-linear-gradient( #d8000055, #d80000 );
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 13px), repeating-linear-gradient(#d8000055, #d80000);
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 @media (max-width: 450px) {
   body{
     margin-bottom: -10px;
-    height: 1340px;
+    overflow: scroll;
+    min-height: 600px;
+    max-height:1222px ;
   }
   
   :root{
