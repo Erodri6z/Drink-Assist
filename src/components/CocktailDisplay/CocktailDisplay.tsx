@@ -5,6 +5,7 @@ import * as drinkService from './../../services/drinkService'
 
 import './CocktailDisplay.css'
 import CocktailCard from "../CocktailCard/CocktailCard"
+import ICard from "../I-Card/ICard"
 
 
 
@@ -56,15 +57,7 @@ const CocktailDisplay: React.FC = () => {
             if (ingredient) {
               return (
                 <li key={ingredientKey} className="ingredients">
-                  <img
-                    src={`https://www.thecocktaildb.com/images/ingredients/${ingredient}-Small.png`}
-                    alt={ingredient}
-                    className="img-ingredients"
-                    />
-                  {`${ingredient}`}
-                  <p>
-                  {`(${measure?measure:'Eye-ball It'})`}
-                  </p>
+                  <ICard  ingredient={ingredient} measure={measure}/>
                 </li>
               );
             }
