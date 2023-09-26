@@ -1,0 +1,7 @@
+.ingredient-card{
+  text-align: center;
+  border: 2px solid red;
+  padding: 7px;
+  height: 200px;
+  background-color: black;
+}

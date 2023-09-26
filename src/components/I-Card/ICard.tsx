@@ -1,3 +1,4 @@
+import './ICard.css'
 
 const ICard = (props:any) => {
   return(
@@ -6,9 +7,9 @@ const ICard = (props:any) => {
         src={`https://www.thecocktaildb.com/images/ingredients/${props.ingredient}-Small.png`}
         alt={props.ingredient}
         className="img-ingredients" />
-      <div>
-        <h3>{props.ingredient}</h3>
-        <p>{`(${props.measure ? props.measure : 'Eye-ball It'})`}</p>
+      <div className="i-info">
+        <h3 className="i-name">{props.ingredient}</h3>
+        <p className="i-messure">{`${props.measure ? props.measure : 'Eye-ball It'}`}</p>
       </div>
     </div>
   )
