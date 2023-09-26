@@ -30,7 +30,7 @@
   background-color: rgb(167, 14, 14);
 }
 .cocktail.page{
-  height:100%
+  overflow: hidden;
 }
 
 .isearch{
@@ -48,9 +48,12 @@
 
   }
   .app-content{
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: clip;
     margin-bottom: 0px
   }
+  
+
 
   .content-container{
     margin-top: 70px;
