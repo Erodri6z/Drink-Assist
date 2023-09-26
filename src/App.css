@@ -1,13 +1,13 @@
 .content-container {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
 }
 
 .app-body{
+  height:100vh;
   display: flex;
-  height: 100%;
 }
 
 .landing{
@@ -50,7 +50,7 @@
   .app-content{
     overflow-x: hidden;
     overflow-y: clip;
-    margin-bottom: 0px
+    margin-bottom: 0px;
   }
   
 
