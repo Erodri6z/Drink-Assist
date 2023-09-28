@@ -29,7 +29,7 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
 
   const searchByIngredients = async () => {
     if (selectedIngredients.length === 0){
-      setRecipe('none found')
+      return
     }
     const drinksList = await drinkService.getDrinksByAlcohol(
       selectedIngredients.join(",")
@@ -66,6 +66,7 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
       <p className="multi">Multi Select</p>
     <form onSubmit={handleSubmit} >
       <select name="i-search" id="i-select" onChange={handleChange}>
+        <option value="">Select Multi</option>
           {ingredients.map((i:any) => 
             <option key={i.strIngredient1} value={i.strIngredient1}>
               {i.strIngredient1}
