@@ -39,7 +39,7 @@
 
 @media (max-width: 750px) {
   .isearch{
-    display: flex;
+    display: inline;
     justify-content: center;
   }
   .landing{
@@ -52,8 +52,6 @@
     overflow-y: clip;
     margin-bottom: 0px;
   }
-  
-
 
   .content-container{
     margin-top: 70px;
