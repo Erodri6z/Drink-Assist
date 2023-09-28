@@ -26,8 +26,6 @@ async function getDrinksByAlcohol(spirit:string): Promise<any> {
   }
 }
 
-console.log(getDrinksByAlcohol('aejorum'))
-
 async function searchByName(query: string): Promise<any> {
   const apiUrl = `${URL}search.php?s=${query}`
   const res = await fetch(apiUrl)

@@ -20,9 +20,16 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     getIngredients()
   }, [])
 
+  useEffect(() => {
+    const intSearch = async () => {
+      searchByIngredients()
+    }
+    intSearch()
+  }, [selectedIngredients])
+
   const searchByIngredients = async () => {
     if (selectedIngredients.length === 0){
-      console.log('nothing is selected')
+      setRecipe('none found')
     }
     const drinksList = await drinkService.getDrinksByAlcohol(
       selectedIngredients.join(",")
@@ -50,7 +57,6 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     searchByIngredients()
   }
 
-  console.log(selectedIngredients)
 
   const clearOptions = () => {
     setSelectedIngredients([])
@@ -65,12 +71,15 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
             </option>
           )}
         </select>
-      <button type="submit" className="spirit-btn">Search</button>
       </form>
-      <div>
-        {selectedIngredients.map((i) =>
-        <li>{i}</li>
-        )}
+      <div className="ingredient-div">
+        <ul className="ingredient-imgs">
+          {selectedIngredients.map((i) =>
+            <li key={i}>
+              <img className="i-img" src={`https://www.thecocktaildb.com/images/ingredients/${i}-Small.png`} alt={i} />
+            </li>
+          )}
+        </ ul>
       </div>
       <button onClick={clearOptions}>Clear</button>
     </div>
