@@ -4,7 +4,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #333;
+  background-color: #000000;
   border-bottom: solid red 1px;
   text-align: center;
   box-shadow:13px 0px 10px 10px rgba(255, 0, 0, 0.2), 1px 4px 30px 0px rgba(255, 0, 0, 0.19);
