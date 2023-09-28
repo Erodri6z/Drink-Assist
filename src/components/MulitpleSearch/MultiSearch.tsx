@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import * as drinkService from '../../services/drinkService'
-import './IngredientsSearch.css'
+// import './IngredientsSearch.css'
 
 interface DataFetchingProps {
   setRecipe: React.Dispatch<React.SetStateAction<any>>
@@ -26,23 +26,24 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     }
     const drinksList = await drinkService.getDrinksByAlcohol(
       selectedIngredients.join(",")
-    )
-    setRecipe(drinksList)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedOption = e.target.value 
-    if(selectedIngredients.includes(selectedOption)) {
-      setSelectedIngredients((prevIngredient) => 
-      prevIngredient.filter((ingredient) => ingredient !== selectedOption)
       )
-    }else {
-      setSelectedIngredients((prevIngredients) => [
-        ...prevIngredients,
-        selectedOption,
-      ]
-    )
-  }
+      setRecipe(drinksList)
+    }
+    
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      const selectedOption = e.target.value 
+      if(selectedIngredients.includes(selectedOption)) {
+        setSelectedIngredients((prevIngredient) => 
+        prevIngredient.filter((ingredient) => ingredient !== selectedOption)
+        )
+      }else {
+        setSelectedIngredients((prevIngredients) => [
+          ...prevIngredients,
+          selectedOption,
+        ]
+        )
+      }
+    }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -50,6 +51,10 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   }
 
   console.log(selectedIngredients)
+
+  const clearOptions = () => {
+    setSelectedIngredients([])
+  }
   return (
     <div className="i-search-component">
     <form onSubmit={handleSubmit} >
@@ -62,10 +67,14 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
         </select>
       <button type="submit" className="spirit-btn">Search</button>
       </form>
+      <div>
+        {selectedIngredients.map((i) =>
+        <li>{i}</li>
+        )}
+      </div>
+      <button onClick={clearOptions}>Clear</button>
     </div>
   )
-
 }
-
 
 export default MultiSearch
