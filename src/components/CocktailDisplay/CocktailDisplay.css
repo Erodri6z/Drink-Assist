@@ -102,6 +102,8 @@
   }
   
   .drink-photo{
+    border: 3px solid red;
+    border-radius: 20px ;
     max-width: 300px;
     min-width: 50px;
     max-height: 300px;
