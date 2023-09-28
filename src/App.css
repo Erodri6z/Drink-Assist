@@ -41,6 +41,7 @@
   .isearch{
     display: inline;
     justify-content: center;
+    text-align: center;
   }
   .landing{
     min-height: 900px;
