@@ -1,0 +1,22 @@
+.ingredient-div{
+  border: solid 2px red;
+  margin: 5px 20px 0px 0px;
+  height: 270px;
+  overflow-y: scroll;
+}
+
+.ingredient-imgs{
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.i-img{
+  width: 70px;
+  height: 70px;
+}
+
+.multi{
+  font-size: 14px;
+  margin: 0px;
+}

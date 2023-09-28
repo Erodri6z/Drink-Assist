@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import * as drinkService from '../../services/drinkService'
-// import './IngredientsSearch.css'
+import './MultiSearch.css'
 
 interface DataFetchingProps {
   setRecipe: React.Dispatch<React.SetStateAction<any>>
@@ -63,6 +63,7 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   }
   return (
     <div className="i-search-component">
+      <p className="multi">Multi Select</p>
     <form onSubmit={handleSubmit} >
       <select name="i-search" id="i-select" onChange={handleChange}>
           {ingredients.map((i:any) => 
