@@ -33,9 +33,9 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Bruno Ace SC', cursive;
-  background-color: #000000;
+  background-color: #27001a;
   opacity: 1;
-  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 13px), repeating-linear-gradient(#d8000055, #d80000);
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #27001a 7px ), repeating-linear-gradient( #ff004855, #ff0048 );
   background-size: cover;
   background-position: center;
   /* overflow: hidden; */

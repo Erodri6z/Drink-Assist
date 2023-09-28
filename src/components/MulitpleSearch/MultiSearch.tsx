@@ -20,26 +20,36 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
     getIngredients()
   }, [])
 
-  const searchByIngredient = async (spirit: string) => {
-    const drinksList = await drinkService.getDrinksByAlcohol(spirit)
+  const searchByIngredients = async () => {
+    if (selectedIngredients.length === 0){
+      console.log('nothing is selected')
+    }
+    const drinksList = await drinkService.getDrinksByAlcohol(
+      selectedIngredients.join(",")
+    )
     setRecipe(drinksList)
   }
 
-  const [searchQuery, setSearchQuery] = useState<string>('');
-
-  const handleSearch = (query: string) => {
-    searchByIngredient(query);
-  };
-
-
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSearchQuery(e.target.value);
-  };
+    const selectedOption = e.target.value 
+    if(selectedIngredients.includes(selectedOption)) {
+      setSelectedIngredients((prevIngredient) => 
+      prevIngredient.filter((ingredient) => ingredient !== selectedOption)
+      )
+    }else {
+      setSelectedIngredients((prevIngredients) => [
+        ...prevIngredients,
+        selectedOption,
+      ]
+    )
+  }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    handleSearch(searchQuery); 
-  };
+    event.preventDefault()
+    searchByIngredients()
+  }
+
+  console.log(selectedIngredients)
   return (
     <div className="i-search-component">
     <form onSubmit={handleSubmit} >
