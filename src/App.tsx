@@ -12,7 +12,7 @@ import RandomPick from './components/RandomPick/RandomPick'
 import { Routes, Route } from 'react-router-dom'
 import CocktailDisplay from './components/CocktailDisplay/CocktailDisplay'
 import ISearch from './components/IngredientsSearch/IngredientsSearch'
-import MultiSearch from './components/MulitpleSearch/MultiSearch'
+// import MultiSearch from './components/MulitpleSearch/MultiSearch'
 
 function App() {
 
@@ -52,7 +52,7 @@ function App() {
               <RandomPick randomDrink={randomPick} />
               <div className='isearch'>
                 <ISearch setRecipe={setRecipeData} />
-                <MultiSearch setRecipe={setRecipeData} />
+                {/* <MultiSearch setRecipe={setRecipeData} /> */}
               </div>
             <CocktailsResults recipesData={recipeData} />
             </div>
