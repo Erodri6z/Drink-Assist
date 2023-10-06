@@ -11,3 +11,10 @@ select{
 .spirit-btn{
   font-family: 'DM Mono', monospace;
 } 
+
+
+.ingredient-div{
+  height: 110px;
+  border: 1px solid red;
+  margin-right: 60px;
+}

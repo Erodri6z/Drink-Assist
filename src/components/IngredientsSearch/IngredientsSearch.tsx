@@ -11,6 +11,7 @@ const ISearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   
   const [ingredients, setIngredients] = useState<any>([])
 
+
   useEffect(() => {
     const getIngredients = async () => {
       const ingredientList = await drinkService.getAlIngredients()
@@ -28,8 +29,9 @@ const ISearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
 
   const handleSearch = (query: string) => {
     searchByIngredient(query);
-  };
+  }
 
+  // console.log(searchQuery)
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSearchQuery(e.target.value);
@@ -49,12 +51,13 @@ const ISearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
             </option>
           )}
         </select>
+        <div className="ingredient-div">
+          <img className="i-img" src={`https://www.thecocktaildb.com/images/ingredients/${searchQuery}-Small.png`} alt={searchQuery} />
+        </div>
       <button type="submit" className="spirit-btn">Search</button>
       </form>
     </div>
   )
-
 }
-
 
 export default ISearch
