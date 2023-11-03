@@ -27,6 +27,9 @@
   font-family: 'DM Mono', monospace;
 }
 
+
+
+
 @media (max-width: 850px){
   .sidebar{
     display: none;
