@@ -27,7 +27,6 @@ class Switch extends Component<ToggleSwitchProps, ToggleSwitchState> {
   }
   
   render() {
-    // console.log(this.state.isChecked)
     return (
       <div>
       <label className="switch">

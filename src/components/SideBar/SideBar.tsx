@@ -2,7 +2,7 @@ import React, { useState } from "react"
 // import { useState } from "react"
 // import * as drinkService from './../../services/drinkService'
 import ISearch from "../IngredientsSearch/IngredientsSearch"
-// import MultiSearch from '../MulitpleSearch/MultiSearch'
+import MultiSearch from '../MulitpleSearch/MultiSearch'
 import './SideBar.css'
 import Switch from "../Switch/Switch"
 
@@ -32,8 +32,11 @@ const SideBar: React.FC<DataFetchingProps> = ({ setRecipe })=> {
         <p className="spirits-title">Spirits Or Ingredients</p>
         <Switch defaultChecked={isSwitchOn} onSwitchChange={handleSwitchToggle} />
         <li className="spirit-list">
+          {isSwitchOn?
           <ISearch setRecipe={ setRecipe } />
-          {/* <MultiSearch setRecipe={ setRecipe } /> */}
+          :
+          <MultiSearch setRecipe={ setRecipe } />
+          }
         </li>
       </ul>
     </div>
