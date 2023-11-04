@@ -18,8 +18,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #000000;
+  border: 1px solid red;
   transition: .4s;
+}
+
+.slider:after {
+  background-color: aqua;
 }
 
 .slider:before {
@@ -28,26 +33,29 @@
   height: 16px;
   width: 16px;
   left: 2px;
-  bottom: 4px;
-  background-color: white;
+  bottom: 3px;
+  background-color: rgb(255, 5, 5);
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #fd0000;
+  
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #000000;
 }
 
 input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(20px);
+  background-color: rgb(0, 0, 0);
 }
 
 .slider {
   border-radius: 34px;
+  
 }
 
 .slider:before {
