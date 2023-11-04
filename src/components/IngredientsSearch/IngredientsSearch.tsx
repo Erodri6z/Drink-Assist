@@ -43,6 +43,7 @@ const ISearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
   };
   return (
     <div className="i-search-component">
+      <p className="single">Single Select</p>
     <form onSubmit={handleSubmit} >
       <select name="i-search" id="i-select" onChange={handleChange}>
           {ingredients.map((i:any) => 

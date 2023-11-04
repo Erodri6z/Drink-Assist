@@ -1,4 +1,10 @@
 
+
+.single{
+  font-size: 14px;
+  margin: 0px;
+}
+
 select{
   width: 100px;
 }

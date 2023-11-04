@@ -28,7 +28,7 @@ class Switch extends Component<ToggleSwitchProps, ToggleSwitchState> {
   
   render() {
     return (
-    <div>
+      <div>
       <label className="switch">
         <input 
           type="checkbox"
