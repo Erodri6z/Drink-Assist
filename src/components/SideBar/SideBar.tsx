@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 // import { useState } from "react"
 // import * as drinkService from './../../services/drinkService'
 import ISearch from "../IngredientsSearch/IngredientsSearch"
@@ -12,15 +12,25 @@ interface DataFetchingProps {
 
 
 
-const SideBar: React.FC<DataFetchingProps> = ({ setRecipe }) => {
+const SideBar: React.FC<DataFetchingProps> = ({ setRecipe })=> {
 
+  const [isSwitchOn, setIsSwtichOn] = useState(true)
+
+  const handleSwitchToggle = (newState: boolean) => {
+    setIsSwtichOn(newState)
+    if(newState) {
+      console.log('Switch is on')
+    } else {
+      console.log("And now its off")
+    }
+  }
 
   return (
     <>
     <div className="sidebar-comp">
       <ul>
         <p className="spirits-title">Spirits Or Ingredients</p>
-        <Switch />
+        <Switch defaultChecked={isSwitchOn} onSwitchChange={handleSwitchToggle} />
         <li className="spirit-list">
           <ISearch setRecipe={ setRecipe } />
           {/* <MultiSearch setRecipe={ setRecipe } /> */}

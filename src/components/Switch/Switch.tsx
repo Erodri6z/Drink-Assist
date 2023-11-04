@@ -3,6 +3,7 @@ import './Switch.css'
 
 
 interface ToggleSwitchProps {
+  onSwitchChange: (isChecked: boolean) => void
   defaultChecked?: boolean
 }
 
@@ -17,14 +18,16 @@ class Switch extends Component<ToggleSwitchProps, ToggleSwitchState> {
       isChecked: props.defaultChecked || false
     }
   }
-
+  
   toggleComponent = () => {
-    this.setState((prevState) => ({
-      isChecked: !prevState.isChecked,
-    }))
+    const { onSwitchChange } = this.props
+    const newIsChecked = !this.state.isChecked
+    this.setState({ isChecked: newIsChecked })
+    onSwitchChange(newIsChecked)
   }
   
   render() {
+    // console.log(this.state.isChecked)
     return (
       <div>
       <label className="switch">
