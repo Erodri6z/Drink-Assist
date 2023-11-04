@@ -52,8 +52,13 @@ const ISearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
             </option>
           )}
         </select>
-        <div className="ingredient-div">
-          <img className="i-img" src={`https://www.thecocktaildb.com/images/ingredients/${searchQuery}-Small.png`} alt={searchQuery} />
+        <div className="i-div">
+          {
+            searchQuery?
+            <img className="si-img" src={`https://www.thecocktaildb.com/images/ingredients/${searchQuery}-Small.png`} alt={searchQuery} />
+            :
+            <span></span>
+          }
         </div>
       <button type="submit" className="spirit-btn">Search</button>
       </form>
