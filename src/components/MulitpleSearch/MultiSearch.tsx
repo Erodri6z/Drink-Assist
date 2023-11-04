@@ -43,7 +43,9 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
         setSelectedIngredients((prevIngredient) => 
         prevIngredient.filter((ingredient) => ingredient !== selectedOption)
         )
-      }else {
+      } else if (selectedIngredients.length === 5){
+        console.log('limit reached')
+      } else {
         setSelectedIngredients((prevIngredients) => [
           ...prevIngredients,
           selectedOption,
@@ -78,7 +80,7 @@ const MultiSearch: React.FC<DataFetchingProps> = ({ setRecipe }) => {
         <ul className="ingredient-imgs">
           {selectedIngredients.map((i) =>
             <li key={i}>
-              <img className="i-img" src={`https://www.thecocktaildb.com/images/ingredients/${i}-Small.png`} alt={i} />
+              <img className="mi-img" src={`https://www.thecocktaildb.com/images/ingredients/${i}-Small.png`} alt={i} />
             </li>
           )}
         </ ul>
